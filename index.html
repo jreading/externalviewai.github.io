@@ -185,11 +185,11 @@
   /* Organizations table */
   .ds-orgs-table { width: 100%; border-collapse: collapse; background: white; border: 1px solid hsl(214 32% 90%); border-radius: 10px; overflow: hidden; font-size: 0.82rem; }
   .ds-orgs-table thead tr { background: white; border-bottom: 1.5px solid hsl(214 32% 89%); }
-  .ds-orgs-table th { padding: 0.7rem 1rem; text-align: left; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ev-nomad); white-space: nowrap; }
+  .ds-orgs-table th { padding: 0.8rem 1rem; text-align: left; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ev-nomad); white-space: nowrap; }
   .ds-orgs-table tbody tr { border-bottom: 1px solid hsl(214 32% 93%); transition: background 0.15s; }
   .ds-orgs-table tbody tr:hover { background: rgba(62,105,139,0.03); }
   .ds-orgs-table tbody tr.ds-row-last { border-bottom: none; }
-  .ds-orgs-table td { padding: 0.8rem 1rem; vertical-align: middle; }
+  .ds-orgs-table td { padding: 1.1rem 1rem; vertical-align: middle; }
   .ds-org-name { font-weight: 500; color: var(--ev-rhino); font-size: 0.82rem; }
   .ds-tier-badge { font-size: 0.65rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 20px; border: 1.5px solid; white-space: nowrap; }
   .ds-tier-badge.t1 { border-color: var(--ev-raw-sienna); color: var(--ev-raw-sienna); }
@@ -199,10 +199,7 @@
   .ds-tier-add { font-size: 0.72rem; color: var(--ev-nomad); cursor: pointer; opacity: 0.6; }
   .ds-cat-tag { font-size: 0.68rem; font-weight: 600; padding: 0.22rem 0.65rem; border-radius: 4px; white-space: nowrap; }
   .ds-cat-tag.think { background: var(--ev-rhino); color: white; }
-  .ds-cat-tag.trade { background: var(--ev-rhino); color: white; }
-  .ds-cat-tag.chamber { background: var(--ev-cutty-sark); color: white; }
   .ds-cat-tag.other { background: var(--ev-nomad); color: white; }
-  .ds-seg-tag { font-size: 0.7rem; font-weight: 500; color: var(--ev-cutty-sark); background: rgba(85,124,127,0.1); padding: 0.2rem 0.6rem; border-radius: 20px; white-space: nowrap; }
   .ds-align-arrow { font-size: 1.1rem; font-weight: 700; }
   .ds-align-arrow.up-strong { color: #2a8c6a; }
   .ds-align-arrow.up { color: #4aaa82; }
@@ -307,13 +304,11 @@
     .ds-table-area { padding: 1rem; }
     .ds-orgs-table { font-size: 0.72rem; }
     .ds-orgs-table th, .ds-orgs-table td { padding: 0.5rem 0.5rem; }
-    /* Hide less critical columns on mobile */
-    .ds-orgs-table th:nth-child(4),
-    .ds-orgs-table td:nth-child(4),
+    /* Hide less critical columns on mobile (Manager, Last Contact) */
+    .ds-orgs-table th:nth-child(6),
+    .ds-orgs-table td:nth-child(6),
     .ds-orgs-table th:nth-child(7),
-    .ds-orgs-table td:nth-child(7),
-    .ds-orgs-table th:nth-child(8),
-    .ds-orgs-table td:nth-child(8) { display: none; }
+    .ds-orgs-table td:nth-child(7) { display: none; }
 
     /* PLATFORM */
     .plat-item-header { padding: 1.25rem 1rem; }
@@ -348,8 +343,8 @@
     .ds-stats-row { grid-template-columns: 1fr 1fr; }
     .ds-orgs-table th:nth-child(3),
     .ds-orgs-table td:nth-child(3),
-    .ds-orgs-table th:nth-child(6),
-    .ds-orgs-table td:nth-child(6) { display: none; }
+    .ds-orgs-table th:nth-child(5),
+    .ds-orgs-table td:nth-child(5) { display: none; }
     .trust-security-grid { grid-template-columns: 1fr; }
     .hero-actions { flex-direction: column; align-items: stretch; }
     .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
@@ -404,9 +399,9 @@
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
-<p class="hero-tagline fade-up delay-2">The AI PLATFORM for External Affairs</p>
+<p class="hero-tagline fade-up delay-2">The AI Intelligence Layer for External Affairs</p>
 <h1 class="hero-headline fade-up delay-1">Do you know if your external partners are delivering&nbsp;<span class="hl">maximum impact?</span></h1>
-<p class="hero-sub fade-up delay-3">Never wonder if your third party partners are moving the needle. Get the maximum impact from every single relationship with External View, the AI platform for external affairs.&nbsp;</p>
+<p class="hero-sub fade-up delay-3">Never wonder if your third party partners are moving the needle. Get the maximum impact from every single relationship with External View, the AI platform for third-party management</p>
 <div class="hero-actions fade-up delay-4">
 <a class="btn-primary" href="https://calendly.com/demo-externalview" target="_blank" rel="noopener">Request a Demo &nbsp;→</a>
 </div>
@@ -424,8 +419,8 @@
 <!-- CLIENTS -->
 <div class="clients">
 <div class="clients-inner">
-<div class="clients-label">Trusted by enterprise external affairs teams at</div>
-<div class="clients-names">Fortune 50 Retailers, Global QSR Brands, and More</div>
+<div class="clients-label">Trusted by Enterprise Teams at</div>
+<div class="clients-names">Fortune 50 Retailers, Global QSRs, Hyperscale Startups, and more</div>
 </div>
 </div>
 <!-- PROBLEM -->
@@ -440,19 +435,19 @@
 <div class="problem-cards reveal visible">
 <div class="problem-card">
 <div class="problem-icon">⏱</div>
-<div><div class="problem-card-title">Time lost to manual tracking</div><p>Your team spends hours each week compiling partner activity from emails, reports, and consultant calls — time better spent on strategy.</p></div>
+<div><div class="problem-card-title">Time lost to manual tracking</div><p>Your team spends hours each week compiling partner activity from emails, reports, and consultant calls. That is time better spent on strategy.</p></div>
 </div>
 <div class="problem-card">
 <div class="problem-icon">🔦</div>
-<div><div class="problem-card-title">Blind spots at the worst moments</div><p>When leadership asks for a fast answer or a crisis hits, you don't have a single source of truth on where your partners stand.</p></div>
+<div><div class="problem-card-title">Blind spots at the worst moments</div><p>When leadership asks for a fast answer or a crisis hits, you don't have a single source of truth on where your partners stand. You are left scrambling.</p></div>
 </div>
 <div class="problem-card">
 <div class="problem-icon">💸</div>
-<div><div class="problem-card-title">Spend with no accountability</div><p>You invest in trade associations and coalitions every year. But at budget season, you're defending spend on faith, not data.</p></div>
+<div><div class="problem-card-title">Spend with no accountability</div><p>You invest in advocacy groups, coalitions, and associations every year. But at budget season, you're defending spend on faith, not data.</p></div>
 </div>
 <div class="problem-card">
 <div class="problem-icon">🔍</div>
-<div><div class="problem-card-title">Missing partners you don't know exist</div><p>The right coalition partner, the right local ally — they're out there. But finding them still relies on who you already know.</p></div>
+<div><div class="problem-card-title">Missing partners you don't know exist</div><p>The right coalition partner, the right local ally. They're out there. But finding them still relies on who you already know.</p></div>
 </div>
 </div>
 </div>
@@ -523,7 +518,6 @@
 <th>Organization</th>
 <th>Tier</th>
 <th>Category</th>
-<th>Segment</th>
 <th>Alignment</th>
 <th>Investment</th>
 <th>Manager</th>
@@ -532,10 +526,9 @@
 </thead>
 <tbody>
 <tr>
-<td class="ds-org-name">Connected Commerce Association (CCA)</td>
+<td class="ds-org-name">American Economic Research Council (AERC)</td>
 <td><span class="ds-tier-badge t1">Tier 1</span></td>
-<td><span class="ds-cat-tag trade">Trade Association</span></td>
-<td><span class="ds-seg-tag">Business</span></td>
+<td><span class="ds-cat-tag think">Think Tank</span></td>
 <td><svg fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 13l5-5 5 5" stroke="#2a8c6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M5 9l5-5 5 5" stroke="#2a8c6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></td>
 <td class="ds-invest">$500k</td>
 <td><span class="ds-mgr-chip">Josh Lyman</span></td>
@@ -545,17 +538,15 @@
 <td class="ds-org-name">National Governance Forum (NGF)</td>
 <td><span class="ds-tier-badge t1">Tier 1</span></td>
 <td><span class="ds-cat-tag think">Think Tanks</span></td>
-<td><span class="ds-seg-tag">Think Tanks</span></td>
 <td><svg fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 13l5-5 5 5" stroke="#2a8c6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M5 9l5-5 5 5" stroke="#2a8c6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></td>
 <td class="ds-invest">$75k</td>
 <td><span class="ds-mgr-chip">Sam Seaborn</span></td>
 <td class="ds-contact">1 day ago</td>
 </tr>
 <tr>
-<td class="ds-org-name">Digital Industry Alliance (DIA)</td>
+<td class="ds-org-name">Digital Executives Association (DEA)</td>
 <td><span class="ds-tier-badge t2">Tier 2</span></td>
-<td><span class="ds-cat-tag trade">Trade Association</span></td>
-<td><span class="ds-seg-tag">Business</span></td>
+<td><span class="ds-cat-tag think">Association</span></td>
 <td><svg fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 13l5-5 5 5" stroke="#2a8c6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M5 9l5-5 5 5" stroke="#2a8c6a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></td>
 <td class="ds-invest">$50k</td>
 <td><span class="ds-mgr-chip">Josh Lyman</span></td>
@@ -565,17 +556,15 @@
 <td class="ds-org-name">Liberty Policy Institute (LPI)</td>
 <td><span class="ds-tier-badge t1">Tier 1</span></td>
 <td><span class="ds-cat-tag think">Think Tanks</span></td>
-<td><span class="ds-seg-tag">Think Tanks</span></td>
 <td><svg fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 13l5-5 5 5" stroke="#4aaa82" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></td>
 <td class="ds-invest">$125k</td>
 <td><span class="ds-mgr-chip">Sam Seaborn</span></td>
 <td class="ds-contact">3 days ago</td>
 </tr>
 <tr>
-<td class="ds-org-name">Midwest Business Chamber (MBC)</td>
+<td class="ds-org-name">Progressive Policy Institute (PPI)</td>
 <td><span class="ds-tier-badge t3">Tier 3</span></td>
-<td><span class="ds-cat-tag chamber">Chamber of Commerce</span></td>
-<td><span class="ds-seg-tag">Business</span></td>
+<td><span class="ds-cat-tag think">Advocacy</span></td>
 <td><svg fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 13l5-5 5 5" stroke="#4aaa82" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></td>
 <td class="ds-invest">$3k</td>
 <td><span class="ds-mgr-chip muted">Josh Lyman</span></td>
@@ -585,17 +574,15 @@
 <td class="ds-org-name">Regional Counties Alliance (RCA)</td>
 <td><span class="ds-tier-badge t3">Tier 3</span></td>
 <td><span class="ds-cat-tag other">Other</span></td>
-<td><span class="ds-seg-tag">Regional</span></td>
 <td><svg fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M4 10h12M13 7l3 3-3 3M7 7L4 10l3 3" stroke="#b5a89b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></td>
 <td class="ds-invest">$9k</td>
 <td><span class="ds-mgr-chip muted">Josh Lyman</span></td>
 <td class="ds-contact">22 days ago</td>
 </tr>
 <tr>
-<td class="ds-org-name">Heartland Manufacturers Federation (HMF)</td>
+<td class="ds-org-name">Center for Strategic Research (CSR)</td>
 <td><span class="ds-tier-badge t4">Tier 4</span></td>
-<td><span class="ds-cat-tag trade">Trade Association</span></td>
-<td><span class="ds-seg-tag">Business</span></td>
+<td><span class="ds-cat-tag think">Think Tank</span></td>
 <td><svg fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 13l5-5 5 5" stroke="#4aaa82" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></td>
 <td class="ds-invest">—</td>
 <td><span class="ds-mgr-chip muted">Josh Lyman</span></td>
@@ -605,7 +592,6 @@
 <td class="ds-org-name">Horizon Advocacy Partners</td>
 <td><span class="ds-tier-badge t3">Tier 3</span></td>
 <td><span class="ds-cat-tag other">Other</span></td>
-<td><span class="ds-seg-tag">Regional</span></td>
 <td><svg fill="none" height="20" viewBox="0 0 20 20" width="20"><path d="M5 7l5 5 5-5" stroke="#c05050" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></td>
 <td class="ds-invest">$25k</td>
 <td><span class="ds-mgr-chip">Josh Lyman</span></td>
